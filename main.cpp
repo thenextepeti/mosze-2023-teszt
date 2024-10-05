@@ -5,29 +5,27 @@ constexpr int N_ELEMENTS = 100;
 int main()
 {
     int *b = new int[NELEMENTS];
-    //' ' helyet " " kell hasznalni nincs ; a sor vegen
-    std::cout << '1-100 ertekek duplazasa'
-    //for ciklus iterációja nincs helyesen megadva
-    for (int i = 0;)
+
+    std::cout << "1-100 ertekek duplazasa";
+
+    for (int i = 0; i < N_ELEMENTS ; i++)
     {
         b[i] = i * 2;
     }
-    //ez a for ciklus sem helyes
-    for (int i = 0; i; i++)
+   
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //sor végén;
-        std::cout << "Ertek:"
+        std::cout << "Ertek:" << b[i] << '/n';
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    //atlagnak kellene egy kiinduló érték
-    int atlag;
+    
+    int atlag = 0;
     for (int i = 0; i < N_ELEMENTS, i++)
     {
-        //sor végén ;
-        atlag += b[i]
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
-    // memóriafelszabadítás a végén...
+    delete[] b;
     return 0;
 }
