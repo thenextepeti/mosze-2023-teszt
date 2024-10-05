@@ -15,7 +15,7 @@ int main()
     //ez a for ciklus sem helyes
     for (int i = 0; i; i++)
     {
-        sor végén;
+        //sor végén;
         std::cout << "Ertek:"
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
